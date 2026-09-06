@@ -1,19 +1,8 @@
-import com.lagradost.cloudstream3.gradle.CloudstreamExtensionTask
-
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        maven("https://jitpack.io")
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:8.2.0")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
-        classpath("com.github.recloudstream:gradle:-SNAPSHOT")
-    }
+plugins {
+    id("com.android.library") version "8.2.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.20" apply false
+    id("com.lagradost.cloudstream3.gradle") version "master-SNAPSHOT"
 }
-
-apply(plugin = "com.otaliastudios.tools.cloudstream")
 
 cloudstream {
     // Repository configuration
